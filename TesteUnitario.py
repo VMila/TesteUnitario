@@ -1,6 +1,6 @@
 import unittest
 
-class TabelaPontos():
+class TimeTabela():
     def __init__(self, nome, vitorias, empates, derrotas, saldoGols):
         self.nome = nome
         self.vitorias = vitorias
@@ -46,30 +46,30 @@ class TabelaPontos():
     
 class TesteClass(unittest.TestCase):
     def testeQuemTaNaFrente(self):
-        Time = TabelaPontos("Sao Paulo", 20, 8, 10, 50)
-        Outro = TabelaPontos("Palmeiras", 19, 8, 11, 46)
+        Time = TimeTabela("Sao Paulo", 20, 8, 10, 50)
+        Outro = TimeTabela("Palmeiras", 19, 8, 11, 46)
         self.assertEqual("Sao Paulo", Time.comparaVencedor(Outro), "Time na frente errado!")
     def testeQuemTaNaFrentePorVitorias(self):
-        Time = TabelaPontos("Sao Paulo", 20, 6, 12, 50)
-        Outro = TabelaPontos("Palmeiras", 19, 9, 10, 50)
+        Time = TimeTabela("Sao Paulo", 20, 6, 12, 50)
+        Outro = TimeTabela("Palmeiras", 19, 9, 10, 50)
         self.assertEqual("Sao Paulo", Time.comparaVencedor(Outro), "Time na frente errado!")    
     def testeQuemTaNaFrentePorSaldoDeGols(self):
-        Time = TabelaPontos("Sao Paulo", 20, 6, 12, 50)
-        Outro = TabelaPontos("Palmeiras", 20, 6, 12, 46)
+        Time = TimeTabela("Sao Paulo", 20, 6, 12, 50)
+        Outro = TimeTabela("Palmeiras", 20, 6, 12, 46)
         self.assertEqual("Sao Paulo", Time.comparaVencedor(Outro), "Time na frente errado!")        
     def testeQuantidadeJogos(self):
-        Time = TabelaPontos("Sao Paulo", 20, 8, 10, 30)
+        Time = TimeTabela("Sao Paulo", 20, 8, 10, 30)
         self.assertEqual(38, Time.quantidadeJogos(), "Quantidade de jogos errada!")
     def testeQuantidadePontos(self):
-        Time = TabelaPontos("Sao Paulo", 23, 8, 7, 30)
+        Time = TimeTabela("Sao Paulo", 23, 8, 7, 30)
         self.assertEqual(77, Time.quantidadePontos(), "Quantidade de pontos errada!")    
     def testeNaoPodeAlcancar(self):
-        Time = TabelaPontos("Sao Paulo", 20, 5, 10, 50)
-        Outro = TabelaPontos("Palmeiras", 16, 6, 13, 20)
+        Time = TimeTabela("Sao Paulo", 20, 5, 10, 50)
+        Outro = TimeTabela("Palmeiras", 16, 6, 13, 20)
         self.assertEqual("Palmeiras nao pode alcancar", Time.daPraAlcancar(Outro), "Resultado incorreto!")    
     def testePodeAlcancar(self):
-        Time = TabelaPontos("Sao Paulo", 19, 5, 10, 50)
-        Outro = TabelaPontos("Palmeiras", 20, 6, 8, 20)
+        Time = TimeTabela("Sao Paulo", 19, 5, 10, 50)
+        Outro = TimeTabela("Palmeiras", 20, 6, 8, 20)
         self.assertEqual("Sao Paulo pode alcancar", Time.daPraAlcancar(Outro), "Resultado incorreto!")        
    
 
