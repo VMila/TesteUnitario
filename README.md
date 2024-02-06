@@ -33,4 +33,6 @@ Compara a pontuação de 2 times para saber se com a quantidade restante de jogo
 
 # Execução do programa
 
+```
 python TesteUnitario.py -v
+```
