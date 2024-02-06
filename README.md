@@ -31,6 +31,6 @@ Compara a pontuação de 2 times e os critérios de desempate para descobrir qua
 
 Compara a pontuação de 2 times para saber se com a quantidade restante de jogos o time que está atrás na tabela ainda pode alcançar o outro. (Considerando que esses 2 times tenham a mesma quantidade de jogos)
 
-#Execução do programa
+# Execução do programa
 
 python TesteUnitario.py -v
